@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  // Main jumbotron for a primary marketing message or call to action=
+  .container
+    h6 Auth: #{title}
+    hr
+    p Please register before using the platform
+    form(method='post', action='users/register', enctype='multipart/form-data')
+      .form-row
+        .form-group.col-md-6
+          label(for='inputEmail4') Name
+          input#inputEmail4.form-control(type='text',name='name', placeholder='Name')
+      .form-row
+        .form-group.col-md-6
+          label(for='inputEmail4') Email
+          input#inputEmail4.form-control(type='email',name='email' placeholder='Email')
+      .form-row
+        .form-group.col-md-6
+          label(for='inputEmail4') Username
+          input#inputEmail4.form-control(type='text',name='username' placeholder='Username')
+      .form-row
+        .form-group.col-md-6
+          label(for='inputEmail4') Password
+          input#inputEmail4.form-control(type='password',name='password' placeholder='Password')
+      .form-row
+        .form-group.col-md-6
+          label(for='inputEmail4') Confirm Password
+          input#inputEmail4.form-control(type='password',name='password2' placeholder='Confirm Password')
+      .form-row
+        .form-group.col-md-6
+          label(for='inputCity') Upload Profile Picture
+          input.form-control(type='file',name='profileImage')     
+      button.btn.btn-primary(type='submit') Submit
